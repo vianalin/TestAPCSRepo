@@ -23,7 +23,7 @@ public class Demo {
     public static String arrayDeepToString(int[][] arr) {
         String result = "{";
         if(arr.length == 0) return result + "}";
-        for(int i = 0; i < arr.length - 1; i++) {
+        for(int i = 0; i < arr.length - 1; i++) { //length = 2, uses arrToString twice
             result = result + arrToString(arr[i]) + ", ";
         }
         result = result + arrToString(arr[arr.length - 1]) + "}";
