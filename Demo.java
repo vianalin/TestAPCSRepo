@@ -23,20 +23,11 @@ public class Demo {
     }
 
     public static String arrayDeepToString(int[][] arr) {
-        return arrToString(); 
+        return arrToString(arr[0]) + arrToString(arr[1]); 
+
     }
 
-    public static int[][] create2DArray(int rows, int cols, int maxValue) {
-        int[][] result = new int[rows][cols];
-        for(int i = 0; i < rows; i++) {
-            result[i] = Random().nextInt(maxValue + 1);
-            for(int j = 0; j < cols; j++) {
-                result[j] = Random().nextInt(maxValue + 1);
-            }
-        }
-        return result;
-    }
-
+<<<<<<< HEAD
     public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue) {
         for[][] result = new int[rows][cols]
 >>>>>>> 4b8df3e26e6d710475a34a93ef6004767df2e4df
@@ -65,5 +56,8 @@ public class Demo {
     }
 
 
+=======
+>>>>>>> 12732d24e485bda6f2f2a20852994536097ae171
 }
+
 
