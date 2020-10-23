@@ -8,7 +8,8 @@ public class firstDemo {
         }
         System.out.println(arrToString(new int[] {1}));
         System.out.println(arrayDeepToString(new int[][] {{1}, {2,3}}));
-        System.out.println(create2DArray(6, 4, 4));
+        System.out.println(arrayDeepToString(create2DArray(6, 4, 4)));
+        System.out.println(arrayDeepToString(create2DArrayRandomized(6, 4, 4)));
     }
 
     public static String arrToString(int[] arr) {
@@ -36,6 +37,17 @@ public class firstDemo {
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
                 result[i][j] = (int) (Math.random() * maxValue);
+            }
+        }
+        return result;
+    }
+
+    public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue) {
+        int[][] result = new int[rows][];
+        for(int i = 0; i < rows; i++) {
+            result[i] = new int[(int) (Math.random()* cols)];
+            for(int j = 0; j < result[i].length; j++) {
+                result[i][j] = (int) (Math.random()* maxValue);
             }
         }
         return result;
